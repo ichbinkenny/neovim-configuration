@@ -1,0 +1,21 @@
+vim.api.nvim_set_keymap('n', '<Space>', '', {})
+vim.g.mapleader=' '
+
+function map(mode, lhs, rhs, opts)
+	local options = { noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+local opts = {noremap = true, silent = true}
+
+-- Require telescope exts here
+require('telescope').load_extension('project')
+map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
+map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
+map('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
+map('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+map('n', '<leader>op', "<cmd>NERDTreeToggle<cr>", opts)
+map('n', '<leader>oP', "<cmd>Telescope project<cr>", opts)
