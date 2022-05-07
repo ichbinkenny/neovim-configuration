@@ -17,5 +17,5 @@ map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>",
 map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 map('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
 map('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
-map('n', '<leader>op', "<cmd>NERDTreeToggle<cr>", opts)
-map('n', '<leader>oP', "<cmd>Telescope project<cr>", opts)
+map('n', '<leader>op', "<cmd>NvimTreeToggle<cr>", opts)
+map('n', '<leader>pp', "<cmd>Telescope project<cr>", opts)
