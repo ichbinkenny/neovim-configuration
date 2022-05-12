@@ -22,3 +22,6 @@ map('n', '<leader>pp', "<cmd>Telescope project<cr>", opts)
 
 -- Neogen mapping for auto doc generation
 map('n', '<leader>cc', ":lua require('neogen').generate()<CR>", opts)
+
+-- Let esc exit term
+map('t', '<Esc>', '<C-\\><C-n>', opts)

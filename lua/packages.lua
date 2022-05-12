@@ -33,4 +33,13 @@ return require('packer').startup(function()
 	use 'nvim-orgmode/orgmode'
 	use { 'kyazdani42/nvim-tree.lua', config = function() require('nvim-tree').setup{} end }
 	use { 'danymat/neogen', config = function() require('neogen').setup{} end, requires = 'nvim-treesitter/nvim-treesitter'}
+	use { 'rcarriga/vim-ultest', requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins"}
+	use { 'ray-x/lsp_signature.nvim', config = function() require('lsp_signature').setup() end }
+	use { 'ldelossa/litee.nvim', config = function() require('litee.lib').setup{} end }
+	use { "oberblastmeister/neuron.nvim", config = function() require('neuron').setup{} end }
+	use 'nvim-lua/popup.nvim'
+	use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
+	use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('todo-comments').setup{} end }
+	use { 'akinsho/toggleterm.nvim', tag = 'v1.*', config = function() require('toggleterm').setup() end }
+	use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons', config = function() require('trouble').setup{} end}
 end)
