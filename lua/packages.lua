@@ -32,4 +32,5 @@ return require('packer').startup(function()
 	use { 'saecki/crates.nvim', config = function() require('crates').setup() end}
 	use 'nvim-orgmode/orgmode'
 	use { 'kyazdani42/nvim-tree.lua', config = function() require('nvim-tree').setup{} end }
+	use { 'danymat/neogen', config = function() require('neogen').setup{} end, requires = 'nvim-treesitter/nvim-treesitter'}
 end)

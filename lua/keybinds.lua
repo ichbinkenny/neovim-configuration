@@ -19,3 +19,6 @@ map('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>", op
 map('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 map('n', '<leader>op', "<cmd>NvimTreeToggle<cr>", opts)
 map('n', '<leader>pp', "<cmd>Telescope project<cr>", opts)
+
+-- Neogen mapping for auto doc generation
+map('n', '<leader>cc', ":lua require('neogen').generate()<CR>", opts)
