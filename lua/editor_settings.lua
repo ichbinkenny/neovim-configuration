@@ -1,15 +1,9 @@
+vim.cmd('colorscheme gruvbox')
+vim.cmd('set number relativenumber')
+vim.cmd('se cursorline')
 
-vim.cmd('colorscheme tokyonight')
-vim.cmd('set number')
-
-require('lualine').setup{
-	options = {
-		theme = 'tokyonight',
-	}
-}
-
-vim.g.tokyonight_colors = {
-	hint = '#aaccee',
-	warning = '#ffaf00',
-	error = '#ff0000',
-}
+-- Have folding work based on syntax of a language
+vim.o.fillchars = "fold: "
+vim.wo.foldmethod = "expr"
+vim.o.foldlevel = 99
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'

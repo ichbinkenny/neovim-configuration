@@ -25,3 +25,9 @@ map('n', '<leader>cc', ":lua require('neogen').generate()<CR>", opts)
 
 -- Let esc exit term
 map('t', '<Esc>', '<C-\\><C-n>', opts)
+
+-- Open and cycle tab shortcuts
+map('n', '<leader>to', "<cmd>tabnew<cr>", opts)
+map('n', '<leader>tn', "<cmd>tabprevious<cr>", opts)
+map('n', '<leader>tp', "<cmd>tabNext<cr>", opts)
+map('n', '<leader>tq', "<cmd>tabclose<cr>", opts)
